@@ -58,6 +58,22 @@ To run the example script, download or clone the repo and then type the followin
 2. ``` yarn ```
 3. ``` yarn example ```
 
+### WhatsApp CLI example (Node.js)
+
+This repository also ships with a standalone CLI (`index.js`) that lets you send and receive
+messages from your own WhatsApp account. Run it directly from the repository root:
+
+```bash
+cd path/to/Baileys
+npm install @whiskeysockets/baileys qrcode-terminal
+node index.js
+```
+
+The script prints a QR code on first launch so you can link your account, saves the multi-file
+auth state to `auth/`, and exposes `/msg`, `/help`, and `/quit` commands in the terminal once the
+connection is open. Subsequent runs reuse the stored credentials, so you only need to rescan if
+WhatsApp logs the session out.
+
 ## Install
 
 Use the stable version:
